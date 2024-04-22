@@ -30,9 +30,6 @@ public class Person {
         return lastName;
     }
     public int getAge() {
-        if(age<0 || age>100) {
-            return 0;
-        }
         return age;
     }
 
@@ -44,6 +41,10 @@ public class Person {
         this.lastName = lastName.trim();
     }
     public void setAge(int age) {
+        if(age<0 || age>100){
+            this.age = 0;
+            return;
+        }
         this.age = age;
     }
 }
