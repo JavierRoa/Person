@@ -30,6 +30,9 @@ public class Person {
         return lastName;
     }
     public int getAge() {
+        if(age<0 || age>100) {
+            return 0;
+        }
         return age;
     }
 
